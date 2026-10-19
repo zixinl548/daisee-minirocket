@@ -1,0 +1,30 @@
+X (7884, 29, 300)  subjects 101
+
+ALL29  (29 channels)
+  fold0 done
+  fold1 done
+  fold2 done
+  fold3 done
+  fold4 done
+
+AU24  (24 channels)
+  fold0 done
+  fold1 done
+  fold2 done
+  fold3 done
+  fold4 done
+
+POSE3  (3 channels)
+  fold0 done
+  fold1 done
+  fold2 done
+  fold3 done
+  fold4 done
+
+saved (7884, 11) -> /work/users/z/i/zixinl/Emotion/align_check/oof_preds.csv
+  ALL29  binary  acc 0.5860
+  ALL29  4class  acc 0.4107
+  AU24   binary  acc 0.5482
+  AU24   4class  acc 0.3565
+  POSE3  binary  acc 0.5790
+  POSE3  4class  acc 0.3992

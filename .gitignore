@@ -1,0 +1,10 @@
+DataSet/
+*.avi
+*.mp4
+au_out/
+align_check/
+*.npy
+Labels/
+__pycache__/
+*.pyc
+.DS_Store

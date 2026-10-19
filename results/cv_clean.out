@@ -1,0 +1,329 @@
+X (7884, 29, 300)  y [5383 1744  666   91]  subjects 101
+clip gaze_yaw: 2666 frames -> +/-90
+clip gaze_pitch: 2405 frames -> +/-90
+
+================================================================
+ALL29  (29 channels)
+================================================================
+  fold0 4class  bal  acc 0.4256  bal 0.3375  F1 0.2790  QWK 0.0767
+  fold0 4class  raw  acc 0.6916  bal 0.2518  F1 0.2088  QWK 0.0051
+  fold0 3class  bal  acc 0.4652  bal 0.4007  F1 0.3676  QWK 0.0600
+  fold0 3class  raw  acc 0.6988  bal 0.3357  F1 0.2801  QWK 0.0063
+  fold0 binary  bal  acc 0.5995  bal 0.5933  F1 0.5744  QWK 0.1660
+  fold0 binary  raw  acc 0.7006  bal 0.5271  F1 0.4750  QWK 0.0719
+  fold1 4class  bal  acc 0.4002  bal 0.2916  F1 0.2592  QWK 0.0707
+  fold1 4class  raw  acc 0.6862  bal 0.2521  F1 0.2102  QWK 0.0070
+  fold1 3class  bal  acc 0.4482  bal 0.4112  F1 0.3611  QWK 0.1186
+  fold1 3class  raw  acc 0.6929  bal 0.3352  F1 0.2801  QWK 0.0076
+  fold1 binary  bal  acc 0.5967  bal 0.5900  F1 0.5724  QWK 0.1610
+  fold1 binary  raw  acc 0.6905  bal 0.5258  F1 0.4788  QWK 0.0669
+  fold2 4class  bal  acc 0.4692  bal 0.3093  F1 0.2752  QWK 0.0640
+  fold2 4class  raw  acc 0.6911  bal 0.2493  F1 0.2044  QWK 0.0007
+  fold2 3class  bal  acc 0.5036  bal 0.3935  F1 0.3693  QWK 0.0853
+  fold2 3class  raw  acc 0.6993  bal 0.3324  F1 0.2744  QWK 0.0011
+  fold2 binary  bal  acc 0.5957  bal 0.5582  F1 0.5519  QWK 0.1091
+  fold2 binary  raw  acc 0.6905  bal 0.5140  F1 0.4574  QWK 0.0371
+  fold3 4class  bal  acc 0.4014  bal 0.3541  F1 0.2792  QWK 0.0734
+  fold3 4class  raw  acc 0.6723  bal 0.2522  F1 0.2062  QWK 0.0056
+  fold3 3class  bal  acc 0.4554  bal 0.4395  F1 0.3837  QWK 0.0889
+  fold3 3class  raw  acc 0.6790  bal 0.3354  F1 0.2748  QWK 0.0057
+  fold3 binary  bal  acc 0.6037  bal 0.5850  F1 0.5762  QWK 0.1593
+  fold3 binary  raw  acc 0.6793  bal 0.5183  F1 0.4474  QWK 0.0480
+  fold4 4class  bal  acc 0.3592  bal 0.2960  F1 0.2417  QWK 0.0262
+  fold4 4class  raw  acc 0.6673  bal 0.2572  F1 0.2233  QWK -0.0028
+  fold4 3class  bal  acc 0.3940  bal 0.3830  F1 0.3256  QWK 0.0719
+  fold4 3class  raw  acc 0.6771  bal 0.3429  F1 0.3000  QWK 0.0003
+  fold4 binary  bal  acc 0.5347  bal 0.5409  F1 0.5211  QWK 0.0719
+  fold4 binary  raw  acc 0.6679  bal 0.5338  F1 0.5054  QWK 0.0822
+
+--- ALL29 汇总 (mean +/- SD over 5 folds) ---
+task     w             accuracy          balanced           macroF1               QWK
+4class   bal    0.4111+/-0.0403   0.3177+/-0.0271   0.2669+/-0.0163   0.0622+/-0.0207
+4class   raw    0.6817+/-0.0112   0.2525+/-0.0029   0.2106+/-0.0074   0.0031+/-0.0041
+3class   bal    0.4533+/-0.0394   0.4056+/-0.0216   0.3615+/-0.0216   0.0849+/-0.0220
+3class   raw    0.6894+/-0.0107   0.3363+/-0.0039   0.2819+/-0.0105   0.0042+/-0.0033
+binary   bal    0.5860+/-0.0289   0.5735+/-0.0229   0.5592+/-0.0234   0.1334+/-0.0414
+binary   raw    0.6858+/-0.0125   0.5238+/-0.0077   0.4728+/-0.0223   0.0612+/-0.0183
+
+================================================================
+AU24  (24 channels)
+================================================================
+  fold0 4class  bal  acc 0.3793  bal 0.3014  F1 0.2552  QWK 0.0424
+  fold0 3class  bal  acc 0.4515  bal 0.3896  F1 0.3555  QWK 0.0592
+  fold0 binary  bal  acc 0.5705  bal 0.5585  F1 0.5432  QWK 0.1042
+  fold1 4class  bal  acc 0.3681  bal 0.2940  F1 0.2483  QWK 0.0177
+  fold1 3class  bal  acc 0.4201  bal 0.4022  F1 0.3438  QWK 0.0696
+  fold1 binary  bal  acc 0.5584  bal 0.5428  F1 0.5303  QWK 0.0769
+  fold2 4class  bal  acc 0.3465  bal 0.2643  F1 0.2249  QWK 0.0011
+  fold2 3class  bal  acc 0.4183  bal 0.3586  F1 0.3269  QWK 0.0556
+  fold2 binary  bal  acc 0.5354  bal 0.5305  F1 0.5123  QWK 0.0529
+  fold3 4class  bal  acc 0.3296  bal 0.2746  F1 0.2361  QWK -0.0057
+  fold3 3class  bal  acc 0.3796  bal 0.3888  F1 0.3284  QWK 0.0204
+  fold3 binary  bal  acc 0.5356  bal 0.5275  F1 0.5154  QWK 0.0497
+  fold4 4class  bal  acc 0.3592  bal 0.2483  F1 0.2337  QWK 0.0038
+  fold4 3class  bal  acc 0.4119  bal 0.3831  F1 0.3349  QWK 0.0537
+  fold4 binary  bal  acc 0.5410  bal 0.5278  F1 0.5176  QWK 0.0507
+
+--- AU24 汇总 (mean +/- SD over 5 folds) ---
+task     w             accuracy          balanced           macroF1               QWK
+4class   bal    0.3565+/-0.0193   0.2765+/-0.0217   0.2397+/-0.0121   0.0119+/-0.0191
+3class   bal    0.4163+/-0.0256   0.3844+/-0.0160   0.3379+/-0.0119   0.0517+/-0.0185
+binary   bal    0.5482+/-0.0156   0.5374+/-0.0133   0.5238+/-0.0128   0.0669+/-0.0237
+
+================================================================
+INT12  (12 channels)
+================================================================
+  fold0 4class  bal  acc 0.3561  bal 0.2565  F1 0.2301  QWK 0.0032
+  fold0 3class  bal  acc 0.4164  bal 0.3518  F1 0.3245  QWK 0.0040
+  fold0 binary  bal  acc 0.5628  bal 0.5207  F1 0.5166  QWK 0.0388
+  fold1 4class  bal  acc 0.3490  bal 0.2664  F1 0.2359  QWK -0.0124
+  fold1 3class  bal  acc 0.4114  bal 0.3818  F1 0.3341  QWK 0.0369
+  fold1 binary  bal  acc 0.5559  bal 0.5394  F1 0.5273  QWK 0.0708
+  fold2 4class  bal  acc 0.3439  bal 0.2529  F1 0.2293  QWK -0.0044
+  fold2 3class  bal  acc 0.4091  bal 0.3662  F1 0.3304  QWK 0.0184
+  fold2 binary  bal  acc 0.5613  bal 0.5257  F1 0.5194  QWK 0.0475
+  fold3 4class  bal  acc 0.3258  bal 0.3082  F1 0.2456  QWK 0.0040
+  fold3 3class  bal  acc 0.4006  bal 0.4125  F1 0.3535  QWK 0.0226
+  fold3 binary  bal  acc 0.5211  bal 0.5074  F1 0.4982  QWK 0.0135
+  fold4 4class  bal  acc 0.3396  bal 0.2340  F1 0.2303  QWK -0.0250
+  fold4 3class  bal  acc 0.3985  bal 0.3660  F1 0.3265  QWK 0.0247
+  fold4 binary  bal  acc 0.5511  bal 0.5225  F1 0.5177  QWK 0.0422
+
+--- INT12 汇总 (mean +/- SD over 5 folds) ---
+task     w             accuracy          balanced           macroF1               QWK
+4class   bal    0.3429+/-0.0114   0.2636+/-0.0276   0.2342+/-0.0069  -0.0069+/-0.0121
+3class   bal    0.4072+/-0.0075   0.3757+/-0.0232   0.3338+/-0.0116   0.0213+/-0.0119
+binary   bal    0.5504+/-0.0170   0.5231+/-0.0114   0.5159+/-0.0107   0.0426+/-0.0205
+
+================================================================
+BIN12  (12 channels)
+================================================================
+  fold0 4class  bal  acc 0.3722  bal 0.2271  F1 0.2248  QWK -0.0002
+  fold0 3class  bal  acc 0.4509  bal 0.3462  F1 0.3316  QWK -0.0036
+  fold0 binary  bal  acc 0.5621  bal 0.5231  F1 0.5182  QWK 0.0431
+  fold1 4class  bal  acc 0.4447  bal 0.3215  F1 0.2550  QWK 0.0749
+  fold1 3class  bal  acc 0.4875  bal 0.3819  F1 0.3477  QWK 0.1061
+  fold1 binary  bal  acc 0.6523  bal 0.5939  F1 0.5943  QWK 0.1886
+  fold2 4class  bal  acc 0.3102  bal 0.2736  F1 0.2049  QWK 0.0076
+  fold2 3class  bal  acc 0.3743  bal 0.3538  F1 0.3004  QWK 0.0411
+  fold2 binary  bal  acc 0.5230  bal 0.5293  F1 0.5055  QWK 0.0496
+  fold3 4class  bal  acc 0.3434  bal 0.2937  F1 0.2312  QWK 0.0510
+  fold3 3class  bal  acc 0.4306  bal 0.3916  F1 0.3451  QWK 0.0465
+  fold3 binary  bal  acc 0.5640  bal 0.5310  F1 0.5275  QWK 0.0591
+  fold4 4class  bal  acc 0.3681  bal 0.2392  F1 0.2308  QWK -0.0066
+  fold4 3class  bal  acc 0.4260  bal 0.3614  F1 0.3229  QWK 0.0529
+  fold4 binary  bal  acc 0.5638  bal 0.5324  F1 0.5282  QWK 0.0613
+
+--- BIN12 汇总 (mean +/- SD over 5 folds) ---
+task     w             accuracy          balanced           macroF1               QWK
+4class   bal    0.3677+/-0.0496   0.2710+/-0.0388   0.2293+/-0.0179   0.0253+/-0.0357
+3class   bal    0.4338+/-0.0412   0.3670+/-0.0191   0.3295+/-0.0192   0.0486+/-0.0391
+binary   bal    0.5730+/-0.0476   0.5419+/-0.0293   0.5347+/-0.0345   0.0804+/-0.0609
+
+================================================================
+POSE3  (3 channels)
+================================================================
+  fold0 4class  bal  acc 0.4295  bal 0.3348  F1 0.2784  QWK 0.1158
+  fold0 3class  bal  acc 0.4548  bal 0.4271  F1 0.3734  QWK 0.0984
+  fold0 binary  bal  acc 0.6001  bal 0.5926  F1 0.5744  QWK 0.1652
+  fold1 4class  bal  acc 0.4330  bal 0.2839  F1 0.2626  QWK 0.0655
+  fold1 3class  bal  acc 0.4607  bal 0.3938  F1 0.3600  QWK 0.0914
+  fold1 binary  bal  acc 0.5936  bal 0.5668  F1 0.5581  QWK 0.1239
+  fold2 4class  bal  acc 0.4082  bal 0.3475  F1 0.2608  QWK 0.0786
+  fold2 3class  bal  acc 0.4432  bal 0.3906  F1 0.3457  QWK 0.0709
+  fold2 binary  bal  acc 0.5931  bal 0.5528  F1 0.5474  QWK 0.0994
+  fold3 4class  bal  acc 0.3831  bal 0.3280  F1 0.2445  QWK 0.0766
+  fold3 3class  bal  acc 0.4369  bal 0.3974  F1 0.3480  QWK 0.0705
+  fold3 binary  bal  acc 0.5703  bal 0.5504  F1 0.5425  QWK 0.0938
+  fold4 4class  bal  acc 0.3422  bal 0.3119  F1 0.2446  QWK 0.0453
+  fold4 3class  bal  acc 0.3876  bal 0.3941  F1 0.3302  QWK 0.0813
+  fold4 binary  bal  acc 0.5385  bal 0.5511  F1 0.5274  QWK 0.0889
+
+--- POSE3 汇总 (mean +/- SD over 5 folds) ---
+task     w             accuracy          balanced           macroF1               QWK
+4class   bal    0.3992+/-0.0376   0.3212+/-0.0245   0.2582+/-0.0142   0.0764+/-0.0257
+3class   bal    0.4366+/-0.0290   0.4006+/-0.0150   0.3515+/-0.0162   0.0825+/-0.0124
+binary   bal    0.5791+/-0.0254   0.5627+/-0.0180   0.5499+/-0.0176   0.1142+/-0.0315
+
+================================================================
+GAZE2  (2 channels)
+================================================================
+  fold0 4class  bal  acc 0.3992  bal 0.2411  F1 0.2337  QWK 0.0378
+  fold0 3class  bal  acc 0.4509  bal 0.3539  F1 0.3322  QWK 0.0572
+  fold0 binary  bal  acc 0.5918  bal 0.5635  F1 0.5545  QWK 0.1173
+  fold1 4class  bal  acc 0.3768  bal 0.3618  F1 0.2569  QWK 0.0668
+  fold1 3class  bal  acc 0.4357  bal 0.3959  F1 0.3485  QWK 0.0723
+  fold1 binary  bal  acc 0.5812  bal 0.5701  F1 0.5550  QWK 0.1259
+  fold2 4class  bal  acc 0.4575  bal 0.2660  F1 0.2444  QWK 0.0270
+  fold2 3class  bal  acc 0.5036  bal 0.3405  F1 0.3369  QWK 0.0113
+  fold2 binary  bal  acc 0.6067  bal 0.5278  F1 0.5281  QWK 0.0568
+  fold3 4class  bal  acc 0.4045  bal 0.3624  F1 0.2594  QWK 0.1170
+  fold3 3class  bal  acc 0.4561  bal 0.3896  F1 0.3591  QWK 0.1082
+  fold3 binary  bal  acc 0.5942  bal 0.5809  F1 0.5699  QWK 0.1497
+  fold4 4class  bal  acc 0.3239  bal 0.2575  F1 0.2219  QWK 0.0711
+  fold4 3class  bal  acc 0.3844  bal 0.3781  F1 0.3264  QWK 0.0705
+  fold4 binary  bal  acc 0.5278  bal 0.5619  F1 0.5235  QWK 0.1035
+
+--- GAZE2 汇总 (mean +/- SD over 5 folds) ---
+task     w             accuracy          balanced           macroF1               QWK
+4class   bal    0.3924+/-0.0484   0.2978+/-0.0594   0.2432+/-0.0158   0.0639+/-0.0351
+3class   bal    0.4461+/-0.0429   0.3716+/-0.0236   0.3406+/-0.0131   0.0639+/-0.0349
+binary   bal    0.5803+/-0.0308   0.5609+/-0.0199   0.5462+/-0.0197   0.1107+/-0.0345
+
+================================================================
+AU4ONLY  (2 channels)
+================================================================
+  fold0 4class  bal  acc 0.3252  bal 0.3137  F1 0.2314  QWK 0.0293
+  fold0 3class  bal  acc 0.4001  bal 0.3774  F1 0.3308  QWK 0.0412
+  fold0 binary  bal  acc 0.5409  bal 0.5543  F1 0.5261  QWK 0.0918
+  fold1 4class  bal  acc 0.2471  bal 0.2878  F1 0.1908  QWK 0.0045
+  fold1 3class  bal  acc 0.3390  bal 0.3461  F1 0.2939  QWK 0.0254
+  fold1 binary  bal  acc 0.5448  bal 0.5334  F1 0.5194  QWK 0.0594
+  fold2 4class  bal  acc 0.2862  bal 0.2656  F1 0.1985  QWK -0.0047
+  fold2 3class  bal  acc 0.3716  bal 0.3407  F1 0.2980  QWK 0.0110
+  fold2 binary  bal  acc 0.5088  bal 0.5060  F1 0.4878  QWK 0.0103
+  fold3 4class  bal  acc 0.2212  bal 0.1997  F1 0.1648  QWK -0.0271
+  fold3 3class  bal  acc 0.2771  bal 0.3042  F1 0.2465  QWK -0.0394
+  fold3 binary  bal  acc 0.4619  bal 0.4652  F1 0.4496  QWK -0.0605
+  fold4 4class  bal  acc 0.3125  bal 0.2802  F1 0.2228  QWK 0.0103
+  fold4 3class  bal  acc 0.3837  bal 0.3447  F1 0.3135  QWK 0.0239
+  fold4 binary  bal  acc 0.5556  bal 0.5193  F1 0.5165  QWK 0.0369
+
+--- AU4ONLY 汇总 (mean +/- SD over 5 folds) ---
+task     w             accuracy          balanced           macroF1               QWK
+4class   bal    0.2784+/-0.0438   0.2694+/-0.0427   0.2016+/-0.0265   0.0024+/-0.0207
+3class   bal    0.3543+/-0.0486   0.3426+/-0.0260   0.2966+/-0.0315   0.0124+/-0.0309
+binary   bal    0.5224+/-0.0380   0.5157+/-0.0334   0.4999+/-0.0317   0.0276+/-0.0576
+
+
+############ 全部通道集 x 任务，balanced accuracy ############
+set         nch            4class            3class            binary
+ALL29        29   0.3177+/-0.0271   0.4056+/-0.0216   0.5735+/-0.0229
+AU24         24   0.2765+/-0.0217   0.3844+/-0.0160   0.5374+/-0.0133
+INT12        12   0.2636+/-0.0276   0.3757+/-0.0232   0.5231+/-0.0114
+BIN12        12   0.2710+/-0.0388   0.3670+/-0.0191   0.5419+/-0.0293
+POSE3         3   0.3212+/-0.0245   0.4006+/-0.0150   0.5627+/-0.0180
+GAZE2         2   0.2978+/-0.0594   0.3716+/-0.0236   0.5609+/-0.0199
+AU4ONLY       2   0.2694+/-0.0427   0.3426+/-0.0260   0.5157+/-0.0334
+
+############ 五折合并混淆矩阵 ############
+
+ALL29  4class  class_weight=bal
+[[2490 1089 1084  720]
+ [ 623  532  370  219]
+ [ 207  158  197  104]
+ [  24   23   25   19]]
+
+ALL29  4class  class_weight=raw
+[[5343   40    0    0]
+ [1713   31    0    0]
+ [ 661    5    0    0]
+ [  91    0    0    0]]
+
+ALL29  3class  class_weight=bal
+[[2692 1247 1444]
+ [ 669  580  495]
+ [ 228  180  258]]
+
+ALL29  3class  class_weight=raw
+[[5343   40    0]
+ [1715   29    0]
+ [ 661    5    0]]
+
+ALL29  binary  class_weight=bal
+[[3268 2115]
+ [1149 1352]]
+
+ALL29  binary  class_weight=raw
+[[5201  182]
+ [2296  205]]
+
+AU24  4class  class_weight=bal
+[[2098 1090 1313  882]
+ [ 585  500  434  225]
+ [ 206  152  202  106]
+ [  34   24   22   11]]
+
+AU24  3class  class_weight=bal
+[[2440 1304 1639]
+ [ 659  544  541]
+ [ 239  168  259]]
+
+AU24  binary  class_weight=bal
+[[3053 2330]
+ [1232 1269]]
+
+INT12  4class  class_weight=bal
+[[1963 1143 1336  941]
+ [ 557  543  382  262]
+ [ 225  151  189  101]
+ [  37   21   25    8]]
+
+INT12  3class  class_weight=bal
+[[2340 1337 1706]
+ [ 642  601  501]
+ [ 261  173  232]]
+
+INT12  binary  class_weight=bal
+[[3214 2169]
+ [1376 1125]]
+
+BIN12  4class  class_weight=bal
+[[2401  715 1280  987]
+ [ 667  295  462  320]
+ [ 230  124  192  120]
+ [  41   16   18   16]]
+
+BIN12  3class  class_weight=bal
+[[2746 1009 1628]
+ [ 793  395  556]
+ [ 266  156  244]]
+
+BIN12  binary  class_weight=bal
+[[3385 1998]
+ [1363 1138]]
+
+POSE3  4class  class_weight=bal
+[[2472 1103 1060  748]
+ [ 634  445  409  256]
+ [ 213  133  206  114]
+ [  16   22   29   24]]
+
+POSE3  3class  class_weight=bal
+[[2579 1349 1455]
+ [ 676  553  515]
+ [ 221  174  271]]
+
+POSE3  binary  class_weight=bal
+[[3265 2118]
+ [1201 1300]]
+
+GAZE2  4class  class_weight=bal
+[[2520 1030  898  935]
+ [ 637  412  331  364]
+ [ 233  137  132  164]
+ [  26   17   22   26]]
+
+GAZE2  3class  class_weight=bal
+[[2750 1292 1341]
+ [ 715  517  512]
+ [ 270  189  207]]
+
+GAZE2  binary  class_weight=bal
+[[3286 2097]
+ [1213 1288]]
+
+AU4ONLY  4class  class_weight=bal
+[[1500 1320 1486 1077]
+ [ 463  485  473  323]
+ [ 156  196  185  129]
+ [  27   25   17   22]]
+
+AU4ONLY  3class  class_weight=bal
+[[1966 1554 1863]
+ [ 586  568  590]
+ [ 211  231  224]]
+
+AU4ONLY  binary  class_weight=bal
+[[2882 2501]
+ [1264 1237]]

@@ -1,0 +1,64 @@
+A (6281, 12180)  B (6281, 9996)  C (6281, 22176)
+
+### A per-channel  4-class
+bal 0.2995   macroF1 0.2617   chance 0.2500
+recall: [0.462 0.33  0.301 0.105]
+[[513 253 259  85]
+ [124 119  95  23]
+ [ 45  20  34  14]
+ [ 10   4   3   2]]
+
+### A per-channel  3-class (drop VeryHigh)
+bal 0.4005   macroF1 0.3513   chance 0.3333
+recall: [0.494 0.319 0.389]
+[[548 258 304]
+ [131 115 115]
+ [ 48  21  44]]
+
+### A per-channel  BINARY 0 vs rest
+bal 0.5618   macroF1 0.5495   chance 0.5000
+recall: [0.614 0.509]
+[[682 428]
+ [242 251]]
+
+### B multivariate  4-class
+bal 0.3201   macroF1 0.2578   chance 0.2500
+recall: [0.431 0.285 0.354 0.211]
+[[478 209 262 161]
+ [108 103 101  49]
+ [ 33  22  40  18]
+ [  6   4   5   4]]
+
+### B multivariate  3-class (drop VeryHigh)
+bal 0.4021   macroF1 0.3398   chance 0.3333
+recall: [0.459 0.296 0.451]
+[[509 246 355]
+ [113 107 141]
+ [ 35  27  51]]
+
+### B multivariate  BINARY 0 vs rest
+bal 0.5502   macroF1 0.5347   chance 0.5000
+recall: [0.581 0.519]
+[[645 465]
+ [237 256]]
+
+### C = A + B  4-class
+bal 0.3103   macroF1 0.2684   chance 0.2500
+recall: [0.462 0.346 0.327 0.105]
+[[513 250 263  84]
+ [118 125 103  15]
+ [ 44  19  37  13]
+ [ 10   4   3   2]]
+
+### C = A + B  3-class (drop VeryHigh)
+bal 0.3981   macroF1 0.3540   chance 0.3333
+recall: [0.499 0.332 0.363]
+[[554 258 298]
+ [127 120 114]
+ [ 48  24  41]]
+
+### C = A + B  BINARY 0 vs rest
+bal 0.5627   macroF1 0.5492   chance 0.5000
+recall: [0.608 0.517]
+[[675 435]
+ [238 255]]

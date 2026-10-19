@@ -1,0 +1,106 @@
+=== rebuild arrays ===
+train: X=(4379, 29, 300)  labels=[3033  929  366   51]
+val: X=(1429, 29, 300)  labels=[942 322 153  12]
+test: X=(1603, 29, 300)  labels=[1110  361  113   19]
+
+=== 按困惑等级看抽取成功率 ===
+status  missing    ok
+conf                 
+0           673  5085
+1           382  1612
+2            88   632
+3            17    82
+
+status  missing      ok
+conf                   
+0        0.1169  0.8831
+1        0.1916  0.8084
+2        0.1222  0.8778
+3        0.1717  0.8283
+
+=== minirocket ===
+train (5808, 29, 300)  test (1603, 29, 300)
+  au_1_intensity           420 feats    25.1s
+  au_2_intensity           420 feats    25.5s
+  au_4_intensity           420 feats    26.0s
+  au_5_intensity           420 feats    26.4s
+  au_6_intensity           420 feats    26.9s
+  au_9_intensity           420 feats    27.3s
+  au_12_intensity          420 feats    27.8s
+  au_15_intensity          420 feats    28.2s
+  au_17_intensity          420 feats    28.7s
+  au_20_intensity          420 feats    29.2s
+  au_25_intensity          420 feats    29.6s
+  au_26_intensity          420 feats    30.0s
+  au_1                     420 feats    30.5s
+  au_2                     420 feats    30.9s
+  au_4                     420 feats    31.4s
+  au_6                     420 feats    31.8s
+  au_7                     420 feats    32.3s
+  au_10                    420 feats    32.7s
+  au_12                    420 feats    33.2s
+  au_14                    420 feats    33.6s
+  au_15                    420 feats    34.1s
+  au_17                    420 feats    34.5s
+  au_23                    420 feats    35.0s
+  au_24                    420 feats    35.4s
+  pitch                    420 feats    35.9s
+  yaw                      420 feats    36.3s
+  roll                     420 feats    36.8s
+  gaze_yaw                 420 feats    37.2s
+  gaze_pitch               420 feats    37.7s
+features (5808, 12180)   38s
+
+=== MiniRocket (per-channel) + Ridge ===
+Accuracy          0.4205
+Balanced accuracy 0.3151
+Macro F1          0.2670
+Majority baseline 0.6925
+
+Confusion matrix (rows=true, cols=pred)
+[[512 289 215  94]
+ [121 126  93  21]
+ [ 46  24  33  10]
+ [  8   4   4   3]]
+
+              precision    recall  f1-score   support
+
+           0      0.745     0.461     0.570      1110
+           1      0.284     0.349     0.313       361
+           2      0.096     0.292     0.144       113
+           3      0.023     0.158     0.041        19
+
+    accuracy                          0.420      1603
+   macro avg      0.287     0.315     0.267      1603
+weighted avg      0.587     0.420     0.476      1603
+
+=== channel importance ===
+roll                         1.98
+gaze_pitch                   1.98
+pitch                        1.97
+gaze_yaw                     1.78
+au_15_intensity              1.72
+au_17_intensity              1.60
+au_12_intensity              1.59
+au_25_intensity              1.57
+au_26_intensity              1.50
+au_1_intensity               1.50
+au_4_intensity               1.49
+au_9_intensity               1.49
+yaw                          1.49
+au_6_intensity               1.47
+au_5_intensity               1.42
+au_20_intensity              1.33
+au_4                         1.33
+au_2_intensity               1.28
+au_7                         1.13
+au_10                        1.13
+au_24                        1.05
+au_17                        1.01
+au_15                        0.98
+au_23                        0.91
+au_6                         0.86
+au_14                        0.83
+au_12                        0.82
+au_1                         0.80
+au_2                         0.37

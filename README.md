@@ -4,9 +4,11 @@ Two pipelines for detecting student confusion in the DAiSEE dataset, and an abla
 showing that the interpretable features one of them is built on contribute nothing.
 
 The headline is a negative result. On DAiSEE, **three head-pose channels match all
-twenty-nine**, and the twenty-four facial action unit channels add no measurable
-increment. This repository contains the code, the run logs, and the checks that led
-to that conclusion, including the ones that failed.
+twenty-nine**, the twenty-four facial action unit channels add no measurable increment,
+and performance is unchanged when the video is downsampled to one sixteenth of its pixels.
+Together those say that the information these labels carry is at the scale of gross
+movement rather than facial expression. This repository contains the code, the run logs,
+and the checks that led there, including the ones that failed.
 
 Zixin (Nancy) Li, UNC Chapel Hill. Advised by Xianming Tan.
 
@@ -110,22 +112,65 @@ leaves every output unchanged. A subject's mean head position within a 10-second
 exactly such a constant. The transform can only see how the head moves within the clip, so
 the static-posture confound is excluded by the algorithm rather than by an experiment.
 
-## Two candidate explanations, and the experiment that separates them
+## Result 3: resolution is not the bottleneck
 
-Either LibreFace cannot estimate action units usefully from this video, or DAiSEE's
-crowd-sourced labels track gross head behaviour rather than facial expression.
-
-Evidence for the first: the median face in DAiSEE is 128 x 148 pixels in a 640 x 480 frame,
-so LibreFace's 512 x 512 aligned crop is about 93% interpolated pixels. At roughly 1.1 mm
-per pixel, a slight action unit is a one-to-three pixel displacement in the source video.
+The obvious explanation for Result 2 is that LibreFace cannot estimate action units from
+this video. The median face in DAiSEE is 128 x 148 pixels in a 640 x 480 frame, so
+LibreFace's 512 x 512 aligned crop is about 93% interpolated pixels. At roughly 1.1 mm per
+pixel, a slight action unit is a one-to-three pixel displacement in the source video.
 Extracted AU intensities sit at a mean of 0.05 on a scale running to five, and six of the
 twelve binary AU channels are a flat line across all 300 frames in more than 74% of clips.
 
-A resolution-ladder experiment (original, lossless re-encode, half, quarter) re-extracts AU
-features at each level and compares them on an identical clip set. If AU performance is flat
-across the ladder, resolution is not the bottleneck and the labels are. If it degrades, 128
-pixels is already inside the damaged regime. Code is in `scripts/02_au_extraction/` and
-`scripts/03_minirocket/cv_scale.py`.
+That explanation is wrong. Every video was re-extracted at four levels, on an identical
+clip set: the original, a lossless re-encode as an encoding control, half resolution, and
+quarter resolution. Downsampling is followed by upsampling back to 640 x 480, so the face's
+pixel size and the detector's working conditions are unchanged and only the information
+content falls.
+
+Binary balanced accuracy:
+
+| Effective face | Level | All 29 | AU 24 | Pose 3 |
+|---|---|---:|---:|---:|
+| ~128 px | original | 0.5735 ± 0.0229 | 0.5374 ± 0.0133 | 0.5627 ± 0.0180 |
+| ~128 px | lossless re-encode | 0.5723 ± 0.0243 | 0.5371 ± 0.0130 | 0.5627 ± 0.0180 |
+| ~64 px | half | 0.5856 ± 0.0225 | 0.5482 ± 0.0146 | 0.5589 ± 0.0215 |
+| ~32 px | quarter | 0.5642 ± 0.0176 | 0.5364 ± 0.0224 | 0.5487 ± 0.0247 |
+
+The encoding control reproduces the original to four decimal places on head pose, which
+validates the pipeline. **The AU column is flat.** Cutting the pixel count to one sixteenth
+moves AU performance from 0.5371 to 0.5364, z = 0.06.
+
+The features themselves moved a great deal. Measured as mean absolute change between the
+re-encode and quarter resolution, divided by each channel's own standard deviation:
+
+| Channel group | Feature change |
+|---|---|
+| AU intensities | 0.26 to 0.94 SD |
+| Binary AU presence | 0.08 to 0.78 SD |
+| Head pitch, yaw, roll | 0.13 to 0.15 SD |
+| Gaze | 0.008 to 0.015 SD |
+
+So the action unit estimates were perturbed by half a standard deviation and more, and the
+classifier's performance did not move. Whatever predictive content those channels carried
+was not in the part that changed, and what changed is precisely the fine facial texture that
+downsampling destroys. Head pose moved least, because head geometry is recovered from the
+global landmark configuration rather than local texture, and it is also the channel group
+that contributes most.
+
+**The information DAiSEE's confusion labels carry is at the scale of gross movement, not at
+the scale of facial expression.** That single statement accounts for all three results: head
+pose matching the full channel set, action units adding nothing, and performance surviving a
+sixteen-fold reduction in pixels.
+
+The end-to-end comparator supports the same reading from the other direction. It consumes
+raw video with no feature extraction at all, and lands at the same place, 0.311 against
+MiniRocket's 0.318. The limitation is not the feature extractor.
+
+Head pose declines slightly across the ladder, 0.5627 to 0.5487, which is the expected
+direction but only z = 1.03 and should not be reported as an effect.
+
+Code is in `scripts/02_au_extraction/extract_au_scaled.py` and
+`scripts/03_minirocket/cv_scale.py`; the log is `results/cv_scale.out`.
 
 ## Method notes
 
